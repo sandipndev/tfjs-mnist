@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TFJS - MNIST Classifier</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div id="iframe">
+                <canvas id="canvas" width="400px" height="400px"></canvas>
+            </div>
+        </div>
+        <div class="row">
+            <button class="btn btn-primary m-2" onclick="determine();">Check Me</button>
+            <input class="btn btn-info m-2" type="submit" value="Clear Canvas" id="clearbutton" onclick="clearCanvas();">
+            <div id="spinn" class="spinner-border m-2" role="status" style="display: none;">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="jumbotron jumbotron-fluid bg-dark text-white rounded">
+                <div class="container-fluid">
+                  <h1 class="display-4" id="res"></h1>
+                  <p class="lead">I say what I see, when you press "Check Me". Using Tensorflow.js, Model is trained on MNIST.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
